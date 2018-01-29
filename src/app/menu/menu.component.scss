@@ -1,0 +1,17 @@
+// variables
+
+$bgColor: #162744;
+$iconColor: #ffffff;
+.header{
+	background:$bgColor;
+	position:relative;
+	height:10vh;
+	span.burgerIcon {
+		position: absolute;
+		top:1rem;
+		right:1rem;
+		i {
+			color: $iconColor;
+		}
+	}
+}
