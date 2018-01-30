@@ -18,5 +18,8 @@ $titleCol: #ffffff;
 		.jobDes {
 			display: inline-block;
 		}
+		.jobLocation, .jobBranch {
+			color: $titleBg;
+		}
 	}
 }

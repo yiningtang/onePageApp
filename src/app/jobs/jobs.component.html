@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main mat-typography">
 	<div class="mainTitle">
 		<button mat-button>Jobs Available</button>
 	</div>
@@ -14,21 +14,22 @@
 				{{jobItem.company.name}}
 			</h4>
 			<h4>
-				{{jobItem.wagePerHourInCents |currency:'USD':true:'1.1-2'}}
+				{{jobItem.wagePerHourInCents|currencyConverter |currency:'USD':true:'1.2-2'}} /Hour
 			</h4>
 		</div>
 		<mat-list class="jobShifts">
+			<h3>If you take this job you are agreeing to work ALL DAYS</h3>
 			<mat-list-item *ngFor="let job of jobItem.shifts">
-				{{job.startDate |  date:'fullDate'}} - {{job.endDate }}
+				{{job.startDate |  date:'fullDate'}}
 			</mat-list-item>
 		</mat-list>
 		<mat-divider></mat-divider>
-		<h4>Location</h4>
+		<h2>Location</h2>
 		<span class="jobLocation">{{jobItem.company.address}}</span>
 		<mat-divider></mat-divider>
-		<h4>Branch</h4>
+		<h2>Branch</h2>
 		<span>{{jobItem.branch}}</span>
-		<span>{{jobItem.branchPhoneNumber}}</span>
+		<span class="jobBranch">{{jobItem.branchPhoneNumber}}</span>
 		<mat-divider></mat-divider>
 	</div>
 </div>
