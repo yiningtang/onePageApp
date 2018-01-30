@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-jobs',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jobs.component.scss']
 })
 export class JobsComponent implements OnInit {
-
-  constructor() { }
+	private jobItem: any;
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+  	this.http.get('http://localhost:4200/assets/jobs.json').subscribe(jobInfo => {
+  		this.jobItem = jobInfo;
+  	});
   }
 
 }

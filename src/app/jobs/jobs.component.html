@@ -1,3 +1,34 @@
-<p>
-  jobs works!
-</p>
+<div class="main">
+	<div class="mainTitle">
+		<button mat-button>Jobs Available</button>
+	</div>
+	<div class="mainItems">
+		<div class="avatar" >
+			<img src="{{jobItem.company.logo}}" />
+		</div>
+		<div class="jobDes">
+			<h1>
+				{{jobItem.title}}
+			</h1>
+			<h4>
+				{{jobItem.company.name}}
+			</h4>
+			<h4>
+				{{jobItem.wagePerHourInCents |currency:'USD':true:'1.1-2'}}
+			</h4>
+		</div>
+		<mat-list class="jobShifts">
+			<mat-list-item *ngFor="let job of jobItem.shifts">
+				{{job.startDate |  date:'fullDate'}} - {{job.endDate }}
+			</mat-list-item>
+		</mat-list>
+		<mat-divider></mat-divider>
+		<h4>Location</h4>
+		<span class="jobLocation">{{jobItem.company.address}}</span>
+		<mat-divider></mat-divider>
+		<h4>Branch</h4>
+		<span>{{jobItem.branch}}</span>
+		<span>{{jobItem.branchPhoneNumber}}</span>
+		<mat-divider></mat-divider>
+	</div>
+</div>

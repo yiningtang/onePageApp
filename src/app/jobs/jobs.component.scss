@@ -1,0 +1,22 @@
+//variables;
+$titleBg: #26d0ff;
+$titleCol: #ffffff;
+.main {
+	.mainTitle {
+		background: $titleBg;
+		button {
+		height: 10vh;
+		color: $titleCol;
+		margin:0.5em;
+		font-size: 28px;
+	  }
+	}
+	.mainItems {
+		.avatar {
+			display: inline-block;
+		}
+		.jobDes {
+			display: inline-block;
+		}
+	}
+}
