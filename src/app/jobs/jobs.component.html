@@ -10,22 +10,22 @@
 			<h1>
 				{{jobItem?.title}}
 			</h1>
-			<h4>
+			<h3>
 				{{jobItem?.company.name}}
-			</h4>
+			</h3>
 			<h4>
 				{{jobItem?.wagePerHourInCents|currencyConverter |currency:'USD':true:'1.2-2'}} /Hour
 			</h4>
 		</div>
 		<mat-list class="jobShifts">
-			<h3>If you take this job you are agreeing to work ALL DAYS</h3>
+			<h2>If you take this job you are agreeing to work ALL DAYS</h2>
 			<mat-list-item *ngFor="let job of jobItem?.shifts">
-				{{job.startDate |  date:'fullDate'}}
+				{{job.startDate |  date:'full'}}
 			</mat-list-item>
 		</mat-list>
 		<mat-divider></mat-divider>
 		<h2>Location</h2>
-		<span class="jobLocation">{{jobItem?.company.address}}</span>
+		<span class="jobLocation"><strong>{{jobItem?.company.address}}</strong></span>
 		<mat-divider></mat-divider>
 		<h2>Branch</h2>
 		<span>{{jobItem?.branch}}</span>
