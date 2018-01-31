@@ -22,4 +22,8 @@ describe('JobsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  /** it('should get jobs from API', () => {
+    expect(component).toContain();
+  });  **/
 });

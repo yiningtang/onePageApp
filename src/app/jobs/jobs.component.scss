@@ -17,6 +17,14 @@ $titleCol: #ffffff;
 		}
 		.jobDes {
 			display: inline-block;
+			margin-left: 1em;
+		}
+		.jobLocation, .jobBranch {
+			color: $titleBg;
+			text-decoration: underline;
+			&+mat-divider {
+				margin-top: 1em;
+			}
 		}
 	}
 }

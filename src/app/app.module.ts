@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { CurrencyConverterPipe } from './currency-converter.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { JobsComponent } from './jobs/jobs.component';
     MenuComponent,
     MainComponent,
     FooterComponent,
-    JobsComponent
+    JobsComponent,
+    CurrencyConverterPipe
   ],
   imports: [
     BrowserModule,

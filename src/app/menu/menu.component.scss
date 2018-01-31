@@ -1,14 +1,16 @@
 // variables
-
 $bgColor: #162744;
 $iconColor: #ffffff;
+
 .header{
 	background:$bgColor;
 	position:relative;
 	height:10vh;
+	line-height: 10vh;
 	span.burgerIcon {
+		display: inline-block;
 		position: absolute;
-		top:1rem;
+		top:0;
 		right:1rem;
 		i {
 			color: $iconColor;

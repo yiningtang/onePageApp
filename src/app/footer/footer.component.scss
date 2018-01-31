@@ -1,18 +1,18 @@
-$titleBg: #26d0ff;
+$footer: #26d0ff;
 footer {
 	height:10vh;
 	position: relative;
 	.option {
 		display: inline-block;
-		color:$titleBg;
+		color:$footer;
 	&:nth-of-type(1) {
 		position: relative;
-		left:1em;
+		left:4em;
 		top:0;
 	}
 	&:nth-of-type(2) {
 		position: absolute;
-		right:1em;
+		right:4em;
 		top:0;
 	}
 	}
