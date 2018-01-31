@@ -26,5 +26,8 @@ $titleCol: #ffffff;
 				margin-top: 1em;
 			}
 		}
+		.jobLocation, .jobBranch {
+			color: $titleBg;
+		}
 	}
 }
