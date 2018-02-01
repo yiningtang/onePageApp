@@ -6,6 +6,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { MatButtonModule } from '@angular/material';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
+import { DataService } from './data.service';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { MainComponent } from './main/main.component';
@@ -31,7 +32,7 @@ import { CurrencyConverterPipe } from './currency-converter.pipe';
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

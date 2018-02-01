@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { DataService } from '../data.service';
+import IJob from '../job';
 
 @Component({
   selector: 'app-jobs',
@@ -7,13 +8,13 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./jobs.component.scss']
 })
 export class JobsComponent implements OnInit {
-	private jobItem: any;
-  constructor(private http: HttpClient) { }
+	jobItem: IJob;
+  constructor(private data: DataService) { }
 
   ngOnInit() {
-  	this.http.get('http://localhost:4200/assets/jobs.json').subscribe(jobInfo => {
-  		this.jobItem = jobInfo;
-  	});
+    this.data.getData('http://localhost:4200/assets/jobs.json').subscribe((job:IJob) => {
+      this.jobItem = job;
+    })
   }
 
 }
